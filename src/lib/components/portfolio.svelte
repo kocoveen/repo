@@ -51,7 +51,7 @@
 			: projects.filter((project) => project.category === selectedFilter.toLowerCase());
 </script>
 
-<article id="portfolio" class="portfolio active box" data-page="portfolio">
+<article id="portfolio" class="portfolio active" data-page="portfolio">
 	<header>
 		<h2 class="h2 article-title">Portfolio</h2>
 	</header>

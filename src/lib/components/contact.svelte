@@ -2,7 +2,7 @@
   - #CONTACT
 -->
 
-<article id="contact" class="contact active box" data-page="contact">
+<article id="contact" class="contact active" data-page="contact">
 	<header>
 		<h2 class="h2 article-title">Contact</h2>
 	</header>

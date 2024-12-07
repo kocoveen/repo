@@ -2,7 +2,7 @@
 	- #RESUME
 -->
 
-<article id="resume" class="resume active box" data-page="resume">
+<article id="resume" class="resume active" data-page="resume">
 	<header>
 		<h2 class="h2 article-title">Resume</h2>
 	</header>

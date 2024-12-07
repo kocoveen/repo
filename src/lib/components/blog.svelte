@@ -2,7 +2,7 @@
 - #BLOG
 -->
 
-<article id="blog" class="blog active box" data-page="blog">
+<article id="blog" class="blog active" data-page="blog">
 	<header>
 		<h2 class="h2 article-title">Blog</h2>
 	</header>

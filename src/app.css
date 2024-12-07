@@ -179,9 +179,9 @@
 	#REUSED STYLE
   \*-----------------------------------*/
 
-  .box {
+  /* .box { (by kocoveen)
 	scroll-margin-top: 60px;
-  }
+  } */
   
   .sidebar,
   article {

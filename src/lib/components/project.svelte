@@ -54,7 +54,7 @@
 			: projectDetails.filter((project) => project.category === selectedFilter);
 </script>
 
-<article id="project" class="project active box" data-page="project">
+<article id="project" class="project active" data-page="project">
 	<header>
 		<h2 class="h2 article-title">Project Details</h2>
 	</header>
