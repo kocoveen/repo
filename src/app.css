@@ -1845,6 +1845,13 @@
 	  --shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.125);
 	  --shadow-3: 0 16px 40px hsla(0, 0%, 0%, 0.125);
 	}
+
+	/**
+	 * BODY (by kocoveen)
+	 */
+	body {
+		overflow-y: scroll; /* Show vertical scrollbar */
+	}
   
 	/**
 	 * REUSED STYLE
