@@ -20,7 +20,7 @@
 		{#each menuItems as item}
 			<li class="navbar-item">
 				<a
-					href="#{item.id}"
+					href="#"
 					class="navbar-link {$activeSection === item.id ? 'active' : ''}"
 					on:click={() => activeSection.set(item.id)}
 					aria-label="article"
