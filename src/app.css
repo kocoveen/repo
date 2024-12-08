@@ -1861,6 +1861,7 @@
 	article {
 	  width: 950px;
 	  box-shadow: var(--shadow-5);
+	  /* transition: var(--transition-2); by kocoveen */
 	}
   
 	/**
@@ -1880,10 +1881,6 @@
 	/**
 	 * NAVBAR
 	 */
-
-	#navbar{
-	  anchor-name: main-anchor;
-	} 
   
 	.navbar {
 	  position: sticky;
@@ -1897,6 +1894,7 @@
 	  box-shadow: none;
 	  height: fit-content;
 	  width: 5%;
+	  animation: fade 0.5s ease backwards; /* by kocoveen */
 	}
   
 	.navbar-list {
