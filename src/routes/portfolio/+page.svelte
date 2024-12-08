@@ -5,39 +5,70 @@
 
 	const projects = [
 		{
+			id: 'facement',
+			title: 'Facement',
+			category: 'web development',
+			image: '/images/project-1.jpg',
+			alt: 'facement'
+		},
+		{
+			id: 'finance',
 			title: 'Finance',
 			category: 'web development',
 			image: '/images/project-1.jpg',
 			alt: 'finance'
 		},
-		{ title: 'Orizon', category: 'web development', image: '/images/project-2.png', alt: 'orizon' },
-		{ title: 'Fundo', category: 'web design', image: '/images/project-3.jpg', alt: 'fundo' },
 		{
+			id: 'orizon',
+			title: 'Orizon',
+			category: 'web development',
+			image: '/images/project-2.png',
+			alt: 'orizon'
+		},
+		{
+			id: 'fundo',
+			title: 'Fundo',
+			category: 'web design',
+			image: '/images/project-3.jpg',
+			alt: 'fundo'
+		},
+		{
+			id: 'brawlhalla',
 			title: 'Brawlhalla',
 			category: 'applications',
 			image: '/images/project-4.png',
 			alt: 'brawlhalla'
 		},
-		{ title: 'DSM.', category: 'web design', image: '/images/project-5.png', alt: 'dsm.' },
 		{
+			id: 'dsm.',
+			title: 'DSM.',
+			category: 'web design',
+			image: '/images/project-5.png',
+			alt: 'dsm.'
+		},
+		{
+			id: 'metaspark',
 			title: 'MetaSpark',
 			category: 'web design',
 			image: '/images/project-6.png',
 			alt: 'metaspark'
 		},
 		{
+			id: 'summary',
 			title: 'Summary',
 			category: 'web development',
 			image: '/images/project-7.png',
 			alt: 'summary'
 		},
 		{
+			id: 'task-manager',
 			title: 'Task Manager',
 			category: 'applications',
 			image: '/images/project-8.jpg',
 			alt: 'task manager'
 		},
 		{
+			id: 'arrival',
 			title: 'Arrival',
 			category: 'web development',
 			image: '/images/project-9.png',
@@ -77,7 +108,7 @@
 		<ul class="project-list">
 			{#each filteredProjects as project}
 				<li class="project-item active" data-filter-item data-category={project.category}>
-					<a href="{base}/portfolio/{project.title}">
+					<a href="{base}/portfolio/{project.id}">
 						<figure class="project-img">
 							<div class="project-item-icon-box">
 								<ion-icon name="eye-outline"></ion-icon>

@@ -1,10 +1,12 @@
 <script>
+	// import { activeProjectFilter } from '$lib/stores/activeFilter.js';
+
 	const filters = ['Summary', 'Architecture', 'Application', 'Lesson Learned'];
 
-	let selectedFilter = 'All';
+	let selectedFilter = 'Summary';
 
 	// $: filteredProjects =
-	//     selectedFilter === 'All'
+	//     selectedFilter === 'Summary'
 	//         ? projects
 	//         : projects.filter((project) => project.category === selectedFilter.toLowerCase());
 </script>
@@ -21,6 +23,7 @@
 				<li class="filter-item">
 					<button
 						class:selected={filter === selectedFilter}
+						class:active={filter === selectedFilter}
 						on:click={() => (selectedFilter = filter)}
 					>
 						{filter}
@@ -29,22 +32,14 @@
 			{/each}
 		</ul>
 
-		<!-- 프로젝트 목록 -->
-		<!-- <ul class="project-list">
-			{#each filteredProjects as project}
-				<li class="project-item active" data-filter-item data-category={project.category}>
-					<a href="{base}/portfolio/{project.title}">
-						<figure class="project-img">
-							<div class="project-item-icon-box">
-								<ion-icon name="eye-outline"></ion-icon>
-							</div>
-							<img src="{base}{project.image}" alt={project.alt} loading="lazy" />
-						</figure>
-						<h3 class="project-title">{project.title}</h3>
-						<p class="project-category">{project.category}</p>
-					</a>
-				</li>
-			{/each}
-		</ul> -->
+		{#if selectedFilter === 'Summary'}
+			<div>프로젝트 요약</div>
+		{:else if selectedFilter === 'Architucture'}
+			<div>아키텍처</div>
+		{:else if selectedFilter === 'Application'}
+			<div>어플리케이션</div>
+		{:else if selectedFilter === 'Lesson Learned'}
+			<div>회고(KPT)</div>
+		{/if}
 	</section>
 </article>

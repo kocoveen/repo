@@ -1,6 +1,5 @@
 <script>
-	import { base } from '$app/paths';
-	import { activeSection } from '$lib/stores/activeSection.js'; // Store 가져오기
+	import { activeArticleFilter } from '$lib/stores/activeFilter.js'; // Store 가져오기
 
 	// 메뉴 아이템
 	const menuItems = [
@@ -22,8 +21,8 @@
 			<li class="navbar-item">
 				<a
 					href="/{item.id}"
-					class="navbar-link {$activeSection === item.id ? 'active' : ''}"
-					on:click={() => console.log(base)}
+					class="navbar-link {$activeArticleFilter === item.id ? 'active' : ''}"
+					on:click={() => activeArticleFilter.set(item.id)}
 					aria-label="article"
 				>
 					<ion-icon name={item.icon}></ion-icon>
