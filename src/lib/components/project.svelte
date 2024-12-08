@@ -1,4 +1,6 @@
 <script>
+	import { base } from '$app/paths';
+
 	// 필터 정의
 	const filters = ['Summary', 'Architecture', 'Application', 'Lesson Learned'];
 
@@ -84,7 +86,7 @@
 			{#each filteredDetails as detail}
 				<li class="project-detail-item active" data-filter-item data-category={detail.category}>
 					<figure class="project-img">
-						<img src={detail.image} alt={detail.alt} loading="lazy" />
+						<img src="{base}{detail.image}" alt={detail.alt} loading="lazy" />
 					</figure>
 					<h3 class="project-title">{detail.title}</h3>
 					<p class="project-category"><strong>Category:</strong> {detail.category}</p>

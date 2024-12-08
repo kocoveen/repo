@@ -1,4 +1,6 @@
 <script>
+	import { base } from '$app/paths';
+
 	// Service 데이터
 	const services = [
 		{
@@ -78,7 +80,7 @@
 			{#each services as service}
 				<li class="service-item">
 					<div class="service-icon-box">
-						<img src={service.icon} alt={`${service.title} icon`} width="40" />
+						<img src="{base}{service.icon}" alt={`${service.title} icon`} width="40" />
 					</div>
 					<div class="service-content-box">
 						<h4 class="h4 service-item-title">{service.title}</h4>
@@ -121,7 +123,7 @@
 			{#each clients as client}
 				<li class="clients-item">
 					<a href="#">
-						<img src={client} alt="client logo" />
+						<img src="{base}{client}" alt="client logo" />
 					</a>
 				</li>
 			{/each}

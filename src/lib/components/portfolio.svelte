@@ -1,4 +1,6 @@
 <script>
+	import { base } from '$app/paths';
+
 	const filters = ['All', 'Web design', 'Applications', 'Web development'];
 
 	const projects = [
@@ -80,7 +82,7 @@
 							<div class="project-item-icon-box">
 								<ion-icon name="eye-outline"></ion-icon>
 							</div>
-							<img src={project.image} alt={project.alt} loading="lazy" />
+							<img src="{base}{project.image}" alt={project.alt} loading="lazy" />
 						</figure>
 						<h3 class="project-title">{project.title}</h3>
 						<p class="project-category">{project.category}</p>

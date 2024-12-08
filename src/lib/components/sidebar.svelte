@@ -1,3 +1,7 @@
+<script>
+	import { base } from '$app/paths';
+</script>
+
 <!--
 - #SIDEBAR
 -->
@@ -5,7 +9,7 @@
 <aside class="sidebar" data-sidebar>
 	<div class="sidebar-info">
 		<figure class="avatar-box">
-			<img src="/images/my-photo.png" alt="장웅기" width="80" />
+			<img src={`${base}/images/my-photo.png`} alt="장웅기" width="80" />
 		</figure>
 
 		<div class="info-content">
