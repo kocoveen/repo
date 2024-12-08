@@ -60,7 +60,7 @@
 	];
 </script>
 
-<article id="about" class="about active box" data-page="about">
+<article id="about" class="about active" data-page="about">
 	<header>
 		<h2 class="h2 article-title">About me</h2>
 	</header>
