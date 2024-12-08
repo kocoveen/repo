@@ -123,7 +123,7 @@
 			{#each clients as client}
 				<li class="clients-item">
 					<a href="#">
-						<img src={client} alt="client logo" />
+						<img src="{base}{client}" alt="client logo" />
 					</a>
 				</li>
 			{/each}
