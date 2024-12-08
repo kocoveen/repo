@@ -1,12 +1,12 @@
 <script>
 	// import { activeProjectFilter } from '$lib/stores/activeFilter.js';
 
-	const filters = ['Summary', 'Architecture', 'Application', 'Lesson Learned'];
+	const filters = ['Overview', 'Architecture', 'Application', 'Lesson Learned'];
 
-	let selectedFilter = 'Summary';
+	let selectedFilter = 'Overview';
 
 	// $: filteredProjects =
-	//     selectedFilter === 'Summary'
+	//     selectedFilter === 'Overview'
 	//         ? projects
 	//         : projects.filter((project) => project.category === selectedFilter.toLowerCase());
 </script>
@@ -32,8 +32,10 @@
 			{/each}
 		</ul>
 
-		{#if selectedFilter === 'Summary'}
-			<div>프로젝트 요약</div>
+		{#if selectedFilter === 'Overview'}
+			<section class="overview">
+				<h3 class="h3">Preview</h3>
+			</section>
 		{:else if selectedFilter === 'Architucture'}
 			<div>아키텍처</div>
 		{:else if selectedFilter === 'Application'}
