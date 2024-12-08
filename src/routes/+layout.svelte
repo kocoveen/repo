@@ -4,8 +4,6 @@
 	import Sidebar from '$lib/components/Sidebar.svelte';
 	import Navbar from '$lib/components/Navbar.svelte';
 
-	import { activeSection } from '$lib/stores/activeSection.js'; // Store 가져오기
-
 	let { children } = $props();
 </script>
 
@@ -45,17 +43,6 @@
 	-->
 
 	<div class="main-content">
-		<!-- {#if $activeSection === 'about'}
-			<About />
-		{:else if $activeSection === 'resume'}
-			<Resume />
-		{:else if $activeSection === 'portfolio'}
-			<Portfolio />
-		{:else if $activeSection === 'blog'}
-			<Blog />
-		{:else if $activeSection === 'contact'}
-			<Contact />
-		{/if} -->
 		{@render children()}
 	</div>
 

@@ -1,4 +1,5 @@
 <script>
+	import { base } from '$app/paths';
 	import { activeSection } from '$lib/stores/activeSection.js'; // Store 가져오기
 
 	// 메뉴 아이템
@@ -20,9 +21,9 @@
 		{#each menuItems as item}
 			<li class="navbar-item">
 				<a
-					href="./{item.id}"
+					href="/{item.id}"
 					class="navbar-link {$activeSection === item.id ? 'active' : ''}"
-					on:click={() => activeSection.set(item.id)}
+					on:click={() => console.log(base)}
 					aria-label="article"
 				>
 					<ion-icon name={item.icon}></ion-icon>
