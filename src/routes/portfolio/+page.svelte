@@ -77,7 +77,7 @@
 		<ul class="project-list">
 			{#each filteredProjects as project}
 				<li class="project-item active" data-filter-item data-category={project.category}>
-					<a href="#{project.title}">
+					<a href="#">
 						<figure class="project-img">
 							<div class="project-item-icon-box">
 								<ion-icon name="eye-outline"></ion-icon>
