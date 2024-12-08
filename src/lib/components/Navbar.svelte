@@ -1,4 +1,5 @@
 <script>
+	import { base } from '$app/paths';
 	import { activeArticleFilter } from '$lib/stores/activeFilter.js'; // Store 가져오기
 
 	// 메뉴 아이템
@@ -20,7 +21,7 @@
 		{#each menuItems as item}
 			<li class="navbar-item">
 				<a
-					href="/{item.id}"
+					href="{base}/{item.id}"
 					class="navbar-link {$activeArticleFilter === item.id ? 'active' : ''}"
 					on:click={() => activeArticleFilter.set(item.id)}
 					aria-label="article"
