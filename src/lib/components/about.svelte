@@ -100,7 +100,7 @@
 					<div class="content-card" data-testimonials-item>
 						<figure class="testimonials-avatar-box">
 							<img
-								src={testimonial.avatar}
+								src="{base}{testimonial.avatar}"
 								alt={testimonial.name}
 								width="60"
 								data-testimonials-avatar
