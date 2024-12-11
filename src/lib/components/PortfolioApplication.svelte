@@ -1,268 +1,204 @@
+<script>
+</script>
+
 <section class="application">
-	<h3 class="h3 tech-title">Tech Stack and Deployment</h3>
-
-	<h3 class="h3 tech-title">프로젝트 소개</h3>
-
-	<li><strong>Kafka:</strong> 비동기 데이터 처리</li>
-	<li><strong>Gemini:</strong> 영수증 텍스트 추출</li>
-	<li><strong>FCM:</strong> 실시간 알림 송신</li>
-	<li><strong>Spring Security:</strong> 사용자 정보 암호화</li>
-
+	<h3 class="h3 application-title">기술 스택</h3>
 	<ul class="tech-list">
-		<li class="tech-item">
-			<div class="content-card">
-				<figure class="contact-item">
-					<div class="icon-box">
-						<ion-icon name="calendar-outline"></ion-icon>
-					</div>
-					<div class="contact-info">
-						<h4 class="h4 tech-item-title">Java</h4>
-					</div>
-				</figure>
-				<div class="tech-text">
-					<p>자바</p>
-				</div>
-			</div>
-		</li>
-		<li class="tech-item">
-			<div class="content-card">
-				<!-- <figure class="tech-icon-box">
-                    <img src="{base}/images/icon-dev.svg" alt="tmp icon" width="0" />
-                </figure> -->
-				<figure class="contact-item">
-					<div class="icon-box">
-						<ion-icon name="calendar-outline"></ion-icon>
-					</div>
-
-					<div class="contact-info">
-						<h4 class="h4 tech-item-title">개발 인원</h4>
-					</div>
-				</figure>
-				<div class="tech-text">
-					<p>6명</p>
-				</div>
-			</div>
-		</li>
-		<li class="tech-item">
-			<div class="content-card">
-				<figure class="contact-item">
-					<div class="icon-box">
-						<ion-icon name="calendar-outline"></ion-icon>
-					</div>
-
-					<div class="contact-info">
-						<h4 class="h4 tech-item-title">담당 역할</h4>
-					</div>
-				</figure>
-				<div class="tech-text">
-					<p>백엔드</p>
-					<!-- <p>
-                        <strong>목표:</strong> 안면 인식 정산 자동화로 정산 시간을 대폭 단축<br />
-                        <strong>성과:</strong> 사진 등록 응답 시간 5초에서 1초 미만으로 단축<br />
-                        <strong>주요 기능:</strong> 사진 등록 대상 자동 인식, 영수증 자동 인식
-                        </p> -->
-				</div>
-			</div>
-		</li>
-		<li class="tech-item">
-			<div class="content-card">
-				<div class="tech-text">
-					<h4 class="h4 tech-item-title">프로젝트 개요</h4>
-					<p>
-						<strong>Facement</strong> 프로젝트는 기존 정산 앱이 정산 대상 및 메뉴, 금액을 수동으로
-						지정해야 하는 불편함을 해결하고자 딥러닝 모델로 사용자를 구별하고, AI로 영수증을 인식해
-						각 메뉴와 금액, 수량을 분류해 불필요한 입력없이 정산을 할 수 있는
-						<strong>다중 안면 인식 정산 자동화 서비스</strong>입니다.
-					</p>
-				</div>
-			</div>
-		</li>
-		<li class="tech-item">
-			<div class="content-card">
-				<div class="tech-text">
-					<h4 class="h4 tech-item-title">주요 기능</h4>
-					<p>
-						프로젝트는 기존 정산 앱이 정산 대상 및 메뉴, 금액을 수동으로 지정해야 하는 불편함을
-						해결하고자
-					</p>
-					<p>딥러닝 모델로 사용자를 구별하고, AI로 영수증을 인식해 각 메뉴와 금액, 수량을 분류해</p>
-					<p>
-						불필요한 입력없이 정산을 할 수 있는
-						<strong>다중 안면 인식 정산 자동화 서비스</strong>입니다.
-					</p>
-				</div>
-			</div>
-		</li>
+		{@render makeTechStackBox(
+			'https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1667082075/noticon/evii0kwjuapddhzjmdrb.png',
+			'Java',
+			'안정성과 성능이 검증된 언어'
+		)}
+		{@render makeTechStackBox(
+			'https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1583139980/noticon/vtzecmjzn39cifnjtonx.png',
+			'Spring Boot',
+			'빠른 어플 개발 지원'
+		)}
+		{@render makeTechStackBox(
+			'https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1686935854/noticon/r7w1ipwmdmhlfzqfw69h.png',
+			'Spring Security',
+			'사용자 정보 암호화'
+		)}
+		{@render makeTechStackBox(
+			'https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1687307488/noticon/o9lxyva5z8zbwyeaxers.png',
+			'JPA',
+			'객체지향적 DB 관리'
+		)}
+		{@render makeTechStackBox(
+			'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg',
+			'MySQL',
+			'안정적 관계형 DB'
+		)}
+		{@render makeTechStackBox(
+			'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apachekafka/apachekafka-original.svg',
+			'Kafka',
+			'대용량 사진 메시징 및 비동기 처리'
+		)}
+		{@render makeTechStackBox(
+			'https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1569654347/noticon/mdujedvj9w8c9rz9phny.png',
+			'JWT',
+			'간편한 인증 관리'
+		)}
+		{@render makeTechStackBox(
+			'https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1566913958/noticon/uoqjdixts4lwsgtsa1pd.png',
+			'FCM',
+			'실시간 알림 송신'
+		)}
 	</ul>
 
-	<ul>
-		<li><strong>Kafka:</strong> 비동기 데이터 처리</li>
-		<li><strong>Gemini:</strong> 영수증 텍스트 추출</li>
-		<li><strong>FCM:</strong> 실시간 알림 송신</li>
-		<li><strong>Spring Security:</strong> 사용자 정보 암호화</li>
+	<h3 class="h3 application-title">개발 기능</h3>
+	<ul class="feature-list">
+		<li class="feature-info">OAuth 2.0 기반 인증 시스템 구현</li>
+		<li class="feature-info">FCM 기반 실시간 알림 시스템 구축</li>
+		<li class="feature-info">Kafka를 활용한 서버 간 비동기 통신 구현</li>
+		<li class="feature-info">Gemini API 연동을 통한 영수증 텍스트 추출</li>
+		<li class="feature-info">AI 서버 운영 및 유지보수</li>
 	</ul>
 
-	<h3 class="h3 feature-title">Key Features</h3>
-	<ul>
-		<li>안면 인식 기반 대상 구분</li>
-		<li>영수증 데이터 자동 추출 및 정산</li>
-		<li>실시간 알림 송신</li>
+	<h3 class="h3 application-title">기여</h3>
+	<ul class="feature-list">
+		<li class="feature-info">백엔드 시스템 및 아키텍처 설계</li>
+		<li class="feature-info">기술 문서화 및 팀 내 지식 공유</li>
+		<li class="feature-info">결제 정산 API 구현</li>
 	</ul>
 </section>
 
+{#snippet makeTechStackBox(
+	/** @type {string} */ src,
+	/** @type {string} */ title,
+	/** @type {string} */ desc
+)}
+	<li class="tech-item">
+		<div class="tech-icon-box">
+			<img {src} alt="tech stack" width="30" />
+		</div>
+
+		<div class="tech-info">
+			<p class="tech-title">{title}</p>
+
+			<desc>{desc}</desc>
+		</div>
+	</li>
+{/snippet}
+
 <style>
+	/**
+	* application
+	*/
+	.application-title {
+		margin-bottom: 20px;
+	}
+
 	/**
    * # tech
    */
 
-	.tech {
-		/* margin-bottom: 30px; */
-	}
-
-	.tech-title {
-		/* margin-bottom: 20px; */
-	}
-
-	.tech-list {
-		/* display: grid;
-		grid-template-columns: 1fr;
-		gap: 20px; */
-
-		display: flex;
-		justify-content: flex-start;
-		align-items: flex-start;
-		gap: 15px;
-		margin: 0 -15px;
-		padding: 25px 15px;
-		padding-bottom: 35px;
-		overflow-x: auto;
-		scroll-behavior: smooth;
-		overscroll-behavior-inline: contain;
-		scroll-snap-type: inline mandatory;
-	}
-
-	.tech-item {
-		/* position: relative;
-		background: var(--border-gradient-onyx);
-		padding: 20px;
-		border-radius: 14px;
-		box-shadow: var(--shadow-2);
-		z-index: 1; */
-
-		min-width: 100%;
-		scroll-snap-align: center;
-	}
-
 	.tech-icon-box {
-		position: absolute;
-		top: 0;
-		left: 0;
-		transform: translate(15px, -25px);
-		background: var(--bg-gradient-onyx);
-		border-radius: 14px;
+		position: relative;
+		/* background: var(--border-gradient-onyx); */
+		background-color: aliceblue;
+		width: 40px;
+		height: 40px;
+		border-radius: 8px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 16px;
+		color: var(--orange-yellow-crayola);
 		box-shadow: var(--shadow-1);
-	}
-
-	.tech-item-title {
-		margin-bottom: 7px;
-	}
-
-	.tech-text {
-		color: var(--light-gray);
-		font-size: var(--fs-6);
-		font-weight: var(--fw-300);
-		line-height: 1.6;
-		/* display: -webkit-box; */
-		line-clamp: 4;
-		-webkit-line-clamp: 4;
-		-webkit-box-orient: vertical;
-		overflow: hidden;
-	}
-
-	/* testimonials */
-
-	.tech-item {
-		min-width: calc(50% - 15px);
-	}
-
-	.tech {
-		margin-bottom: 35px;
-	}
-
-	.tech-title {
-		margin-bottom: 20px;
+		z-index: 1;
 	}
 
 	.tech-list {
 		display: grid;
 		grid-template-columns: 1fr;
-		gap: 20px;
+		gap: 16px;
+		margin-bottom: 35px;
+	}
+
+	.tech-item {
+		min-width: 100%;
+		display: flex;
+		align-items: center;
+		gap: 16px;
+	}
+
+	.tech-info {
+		max-width: calc(100% - 46px);
+		width: calc(100% - 46px);
+	}
+
+	.tech-title {
+		color: var(--light-gray-70);
+		font-size: var(--fs-8);
+		text-transform: uppercase;
+		margin-bottom: 2px;
+	}
+
+	.tech-info :is(.tech-link, desc) {
+		color: var(--white-2);
+		font-size: var(--fs-7);
+	}
+
+	.tech-info address {
+		font-style: normal;
+	}
+
+	.social-list {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		gap: 15px;
+		padding-bottom: 4px;
+		padding-left: 7px;
+	}
+
+	.social-item .social-link {
+		color: var(--light-gray-70);
+		font-size: 18px;
+	}
+
+	.social-item .social-link:hover {
+		color: var(--light-gray);
 	}
 
 	@media (min-width: 580px) {
-		/* testimonials */
-
-		.tech-title {
-			margin-bottom: 25px;
-		}
-
-		.tech-list {
-			gap: 30px;
-			margin: 0 -30px;
-			padding: 30px;
-			padding-bottom: 35px;
-			grid-template-columns: 1fr;
-		}
-
-		.tech-item:nth-child(n + 4) {
-			/* min-width: 100%; */
-			scroll-snap-align: center;
-			grid-column: 1 / -1;
-		}
-
-		.tech-icon-box {
-			transform: translate(30px, -30px);
-			border-radius: 20px;
-		}
-
-		.tech-icon-box img {
-			width: 80px;
-		}
-
-		.tech-item-title {
-			margin-bottom: 10px;
-			/* margin-left: 95px; */
-		}
-
-		.tech-text {
-			line-clamp: 2;
-			-webkit-line-clamp: 2;
-			margin-left: 62px;
-		}
 	}
 
 	@media (min-width: 768px) {
 		.tech-list {
-			gap: 30px;
-			margin: 0 -30px;
-			padding: 30px;
-			padding-bottom: 35px;
 			grid-template-columns: 1fr 1fr;
 		}
 	}
 
 	@media (min-width: 1440px) {
-		/* testimonials */
-		.tech-item {
-			min-width: calc(50% - 15px);
-		}
-
 		.tech-list {
-			gap: 30px;
-			margin: 0 -30px;
-			padding: 30px;
-			padding-bottom: 35px;
 			grid-template-columns: 1fr 1fr 1fr;
 		}
+	}
+
+	/** feature */
+	.feature-list {
+		gap: 16px;
+		margin-bottom: 35px;
+	}
+
+	.feature-info {
+		/* color: var(--white-2); */
+		/* font-size: var(--fs-7); */
+		/* content: ''; */
+		/* position: relative; */
+		/* left: 0; */
+		/* top: 8px; */
+		/* width: 6px; */
+		/* height: 6px; */
+		/* background: var(--orange-yellow-crayola); */
+		/* border-radius: 50%; */
+
+		color: var(--light-gray);
+		font-size: var(--fs-6);
+		margin-bottom: 8px;
+		padding-left: 20px;
+		position: relative;
 	}
 </style>
