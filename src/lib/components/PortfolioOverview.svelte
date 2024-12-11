@@ -7,15 +7,8 @@
 	<ul class="overview-list">
 		<li class="overview-item">
 			<div class="content-card">
-				<figure class="contact-item">
-					<div class="icon-box">
-						<ion-icon name="calendar-outline"></ion-icon>
-					</div>
+				{@render makeIconBox('calendar-outline', '개발 기간')}
 
-					<div class="contact-info">
-						<h4 class="h4 overview-item-title">개발 기간</h4>
-					</div>
-				</figure>
 				<!-- <figure class="overview-icon-box">
                     <img src="{base}/images/icon-dev.svg" alt="tmp icon" width="0" />
                 </figure> -->
@@ -29,12 +22,12 @@
 				<!-- <figure class="overview-icon-box">
                     <img src="{base}/images/icon-dev.svg" alt="tmp icon" width="0" />
                 </figure> -->
-				<figure class="contact-item">
+				<figure class="overview-item">
 					<div class="icon-box">
-						<ion-icon name="calendar-outline"></ion-icon>
+						<ion-icon name="people-outline"></ion-icon>
 					</div>
 
-					<div class="contact-info">
+					<div class="overview-info">
 						<h4 class="h4 overview-item-title">개발 인원</h4>
 					</div>
 				</figure>
@@ -45,12 +38,12 @@
 		</li>
 		<li class="overview-item">
 			<div class="content-card">
-				<figure class="contact-item">
+				<figure class="overview-item">
 					<div class="icon-box">
-						<ion-icon name="calendar-outline"></ion-icon>
+						<ion-icon name="person-circle-outline"></ion-icon>
 					</div>
 
-					<div class="contact-info">
+					<div class="overview-info">
 						<h4 class="h4 overview-item-title">담당 역할</h4>
 					</div>
 				</figure>
@@ -66,8 +59,16 @@
 		</li>
 		<li class="overview-item">
 			<div class="content-card">
+				<figure class="overview-item">
+					<div class="icon-box">
+						<ion-icon name="newspaper-outline"></ion-icon>
+					</div>
+
+					<div class="overview-info">
+						<h4 class="h4 overview-item-title">프로젝트 개요</h4>
+					</div>
+				</figure>
 				<div class="overview-text">
-					<h4 class="h4 overview-item-title">프로젝트 개요</h4>
 					<p>
 						<strong>Facement</strong> 프로젝트는 기존 정산 앱이 정산 대상 및 메뉴, 금액을 수동으로
 						지정해야 하는 불편함을 해결하고자 딥러닝 모델로 사용자를 구별하고, AI로 영수증을 인식해
@@ -79,15 +80,20 @@
 		</li>
 		<li class="overview-item">
 			<div class="content-card">
+				<figure class="overview-item">
+					<div class="icon-box">
+						<ion-icon name="key-outline"></ion-icon>
+					</div>
+
+					<div class="overview-info">
+						<h4 class="h4 overview-item-title">주요 기능</h4>
+					</div>
+				</figure>
 				<div class="overview-text">
-					<h4 class="h4 overview-item-title">주요 기능</h4>
 					<p>
 						프로젝트는 기존 정산 앱이 정산 대상 및 메뉴, 금액을 수동으로 지정해야 하는 불편함을
-						해결하고자
-					</p>
-					<p>딥러닝 모델로 사용자를 구별하고, AI로 영수증을 인식해 각 메뉴와 금액, 수량을 분류해</p>
-					<p>
-						불필요한 입력없이 정산을 할 수 있는
+						해결하고자 딥러닝 모델로 사용자를 구별하고, AI로 영수증을 인식해 각 메뉴와 금액, 수량을
+						분류해 불필요한 입력없이 정산을 할 수 있는
 						<strong>다중 안면 인식 정산 자동화 서비스</strong>입니다.
 					</p>
 				</div>
@@ -96,7 +102,24 @@
 	</ul>
 </section>
 
+{#snippet makeIconBox(/** @type {string} */ name, /** @type {string} */ title)}
+	<figure class="overview-item">
+		<div class="icon-box">
+			<ion-icon {name}></ion-icon>
+		</div>
+
+		<div class="overview-info">
+			<h4 class="h4 overview-item-title">{title}</h4>
+		</div>
+	</figure>
+{/snippet}
+
 <style>
+	.content-card {
+		flex: 1 0 auto;
+		flex-basis: 100%; /* break line 방지 */
+	}
+
 	/**
    * # overview
    */
@@ -136,7 +159,14 @@
 		z-index: 1; */
 
 		min-width: 100%;
-		scroll-snap-align: center;
+		display: flex;
+		align-items: center;
+		gap: 16px;
+	}
+
+	.overview-info {
+		max-width: calc(100% - 46px);
+		width: calc(100% - 46px);
 	}
 
 	.overview-icon-box {
@@ -172,7 +202,7 @@
 	}
 
 	.overview {
-		margin-bottom: 35px;
+		/* margin-bottom: 35px; */
 	}
 
 	.overview-title {
