@@ -2,7 +2,7 @@
 </script>
 
 <section class="application">
-	<h3 class="h3 application-title">기술 스택</h3>
+	<h3 class="h3 article-title">기술 스택</h3>
 	<ul class="tech-list">
 		{@render makeTechStackBox(
 			'https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1667082075/noticon/evii0kwjuapddhzjmdrb.png',
@@ -46,7 +46,7 @@
 		)}
 	</ul>
 
-	<h3 class="h3 application-title">개발 기능</h3>
+	<h3 class="h3 article-title">개발 기능</h3>
 	<ul class="feature-list">
 		<li class="feature-info">OAuth 2.0 기반 인증 시스템 구현</li>
 		<li class="feature-info">FCM 기반 실시간 알림 시스템 구축</li>
@@ -55,7 +55,7 @@
 		<li class="feature-info">AI 서버 운영 및 유지보수</li>
 	</ul>
 
-	<h3 class="h3 application-title">기여</h3>
+	<h3 class="h3 article-title">기여</h3>
 	<ul class="feature-list">
 		<li class="feature-info">백엔드 시스템 및 아키텍처 설계</li>
 		<li class="feature-info">기술 문서화 및 팀 내 지식 공유</li>
