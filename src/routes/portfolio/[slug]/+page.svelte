@@ -39,16 +39,16 @@
 		<PortfolioOverview />
 	{:else if selectedFilter === 'Documentation'}
 		<section class="documentation">
-			<h3 class="h3 architecture-title">System Architecture</h3>
+			<h3 class="h3 article-title">시스템 아키텍처</h3>
 			<img src="/path-to-architecture.png" alt="system architecture" />
 			<p>Kafka 기반 비동기 처리와 AI 기반 영수증 인식을 포함한 시스템 구조</p>
 
-			<h3 class="h3 api-title">API specification</h3>
+			<h3 class="h3 article-title">API 명세서</h3>
 			<img src="/path-to-api.png" alt="api specification" />
 			<p>RESTful API 설계</p>
 
-			<h3 class="h3 api-title">ER Diagram</h3>
-			<img src="/path-to-api.png" alt="api specification" />
+			<h3 class="h3 article-title">ERD</h3>
+			<img src="/path-to-api.png" alt="erd" />
 			<p>ER 다이어그램</p>
 
 			<!-- <ul>
@@ -60,14 +60,14 @@
 		<PortfolioApplication />
 	{:else if selectedFilter === 'Lesson Learned'}
 		<section class="lesson-learned">
-			<h3 class="h3 problem-solving-title">Problem Solving</h3>
-			<ul>
-				<li>Kafka를 도입해 사진 등록 속도 5초에서 1초로 개선</li>
-				<li>Spring Security로 데이터 암호화</li>
-				<li>성능 병목 해결 및 코드 리팩토링</li>
+			<h3 class="h3 article-title">Problem Solving</h3>
+			<ul class="feature-list">
+				<li class="feature-info">Kafka를 도입해 사진 등록 속도 5초에서 1초로 개선</li>
+				<li class="feature-info">Spring Security로 데이터 암호화</li>
+				<li class="feature-info">성능 병목 해결 및 코드 리팩토링</li>
 			</ul>
 
-			<h3 class="h3 retrospective-title">Retrospective</h3>
+			<h3 class="h3 article-title">Retrospective</h3>
 			<ul>
 				<li>Keep: 안정적인 시스템 설계 및 구현</li>
 				<li>Problem: 초기 기획에서 서비스 범위 과도 설정</li>
@@ -84,4 +84,18 @@
 			padding-top: 25px;
 		}
 	} */
+
+	/** feature */
+	.feature-list {
+		gap: 16px;
+		margin-bottom: 35px;
+	}
+
+	.feature-info {
+		color: var(--light-gray);
+		font-size: var(--fs-6);
+		margin-bottom: 8px;
+		padding-left: 20px;
+		position: relative;
+	}
 </style>

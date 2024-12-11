@@ -176,29 +176,4 @@
 			grid-template-columns: 1fr 1fr 1fr;
 		}
 	}
-
-	/** feature */
-	.feature-list {
-		gap: 16px;
-		margin-bottom: 35px;
-	}
-
-	.feature-info {
-		/* color: var(--white-2); */
-		/* font-size: var(--fs-7); */
-		/* content: ''; */
-		/* position: relative; */
-		/* left: 0; */
-		/* top: 8px; */
-		/* width: 6px; */
-		/* height: 6px; */
-		/* background: var(--orange-yellow-crayola); */
-		/* border-radius: 50%; */
-
-		color: var(--light-gray);
-		font-size: var(--fs-6);
-		margin-bottom: 8px;
-		padding-left: 20px;
-		position: relative;
-	}
 </style>

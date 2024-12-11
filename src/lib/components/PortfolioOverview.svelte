@@ -3,7 +3,7 @@
 </script>
 
 <section class="overview">
-	<h3 class="h3 overview-title">프로젝트 소개</h3>
+	<h3 class="h3 article-title">프로젝트 소개</h3>
 	<ul class="overview-list">
 		<li class="overview-item">
 			<div class="content-card">
