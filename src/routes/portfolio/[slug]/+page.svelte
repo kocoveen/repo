@@ -1,7 +1,7 @@
 <script>
 	import { base } from '$app/paths';
 	import PortfolioApplication from '$lib/components/PortfolioApplication.svelte';
-	import Overview from '$lib/components/PortfolioOverview.svelte';
+	import PortfolioOverview from '$lib/components/PortfolioOverview.svelte';
 
 	// import { activeProjectFilter } from '$lib/stores/activeFilter.js';
 
@@ -36,7 +36,7 @@
 	</ul>
 
 	{#if selectedFilter === 'Overview'}
-		<Overview />
+		<PortfolioOverview />
 	{:else if selectedFilter === 'Documentation'}
 		<section class="documentation">
 			<h3 class="h3 architecture-title">System Architecture</h3>
@@ -59,7 +59,7 @@
 	{:else if selectedFilter === 'Application'}
 		<PortfolioApplication />
 	{:else if selectedFilter === 'Lesson Learned'}
-		<section>
+		<section class="lesson-learned">
 			<h3 class="h3 problem-solving-title">Problem Solving</h3>
 			<ul>
 				<li>Kafka를 도입해 사진 등록 속도 5초에서 1초로 개선</li>
@@ -78,10 +78,10 @@
 </article>
 
 <style>
-	@media (min-width: 580px) {
+	/* @media (min-width: 580px) {
 		.content-card {
 			padding: 30px;
 			padding-top: 25px;
 		}
-	}
+	} */
 </style>
