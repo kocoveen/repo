@@ -77,7 +77,7 @@ const facement = {
   title: "Facement",
   category: "team project",
   period: "2024.08~2024.10",
-  image: '/images/project-5.png',
+  image: '/images/project-1.jpg',
   overview: {
     previews: {
       architecture: "",
@@ -154,48 +154,377 @@ const facement = {
 /**
  * @type {Project}
  */
-// const finance = {
-//     id: 'finance',
-//     title: 'Finance',
-//     category: 'web development',
-//     period: '',
-//     image: '/images/project-1.jpg',
-//     overview: {
-//       previews: {
-//         architecture: '',
-//         api: '',
-//         erd: '',
-//       },
-//       period: '',
-//       week: 0,
-//       number: 0,
-//       role: '',
-//       summary: '',
-//       keyFeature: '',
-//     },
-//     application: {
-//       techStacks: [],
-//       features: [],
-//       contributions: [],
-//     },
-//     documentation: {
-//       architecture: { image: '' },
-//       api: { image: '' },
-//       erd: { image: '' },
-//     },
-//     lessonLearned: {
-//       problemSolving: [],
-//       kpt: [
-//         { keep: '', problem: '', try: '' }
-//       ]
-//     }
-// }
+const finance = {
+    id: 'finance',
+    title: 'Finance',
+    category: 'web development',
+    period: '',
+    image: '/images/project-1.jpg',
+    overview: {
+      previews: {
+        architecture: '',
+        api: '',
+        erd: '',
+      },
+      period: '',
+      week: 0,
+      number: 0,
+      role: '',
+      summary: '',
+      keyFeature: '',
+    },
+    application: {
+      techStacks: [],
+      features: [],
+      contributions: [],
+    },
+    documentation: {
+      architecture: { image: '' },
+      api: { image: '' },
+      erd: { image: '' },
+    },
+    lessonLearned: {
+      problemSolving: [],
+      kpt: [
+        { keep: '', problem: '', try: '' }
+      ]
+    }
+}
 
 /**
+ * @type {Project}
+ */
+const orizon = {
+    id: 'orizon',
+    title: 'Orizon',
+    category: 'web development',
+    period: '',
+    image: '/images/project-2.png',
+    overview: {
+      previews: {
+        architecture: '',
+        api: '',
+        erd: '',
+      },
+      period: '',
+      week: 0,
+      number: 0,
+      role: '',
+      summary: '',
+      keyFeature: '',
+    },
+    application: {
+      techStacks: [],
+      features: [],
+      contributions: [],
+    },
+    documentation: {
+      architecture: { image: '' },
+      api: { image: '' },
+      erd: { image: '' },
+    },
+    lessonLearned: {
+      problemSolving: [],
+      kpt: [
+        { keep: '', problem: '', try: '' },
+      ],
+    },
+}
+
+/**
+ * @type {Project}
+ */
+const fundo = {
+    id: 'fundo',
+    title: 'Fundo',
+    category: 'web design',
+    period: '',
+    image: '/images/project-3.jpg',
+    overview: {
+      previews: {
+        architecture: '',
+        api: '',
+        erd: '',
+      },
+      period: '',
+      week: 0,
+      number: 0,
+      role: '',
+      summary: '',
+      keyFeature: '',
+    },
+    application: {
+      techStacks: [],
+      features: [],
+      contributions: [],
+    },
+    documentation: {
+      architecture: { image: '' },
+      api: { image: '' },
+      erd: { image: '' },
+    },
+    lessonLearned: {
+      problemSolving: [],
+      kpt: [
+        { keep: '', problem: '', try: '' },
+      ],
+    },
+}
+
+/**
+ * @type {Project}
+ */
+const brawlhalla = {
+    id: 'brawlhalla',
+    title: 'Brawlhalla',
+    category: 'applications',
+    period: '',
+    image: '/images/project-4.png',
+    overview: {
+      previews: {
+        architecture: '',
+        api: '',
+        erd: '',
+      },
+      period: '',
+      week: 0,
+      number: 0,
+      role: '',
+      summary: '',
+      keyFeature: '',
+    },
+    application: {
+      techStacks: [],
+      features: [],
+      contributions: [],
+    },
+    documentation: {
+      architecture: { image: '' },
+      api: { image: '' },
+      erd: { image: '' },
+    },
+    lessonLearned: {
+      problemSolving: [],
+      kpt: [
+        { keep: '', problem: '', try: '' },
+      ],
+    },
+}
+
+/**
+ * @type {Project}
+ */
+const dsm = {
+    id: 'dsm.',
+    title: 'DSM.',
+    category: 'web design',
+    period: '',
+    image: '/images/project-5.png',
+    overview: {
+      previews: {
+        architecture: '',
+        api: '',
+        erd: '',
+      },
+      period: '',
+      week: 0,
+      number: 0,
+      role: '',
+      summary: '',
+      keyFeature: '',
+    },
+    application: {
+      techStacks: [],
+      features: [],
+      contributions: [],
+    },
+    documentation: {
+      architecture: { image: '' },
+      api: { image: '' },
+      erd: { image: '' },
+    },
+    lessonLearned: {
+      problemSolving: [],
+      kpt: [
+        { keep: '', problem: '', try: '' },
+      ],
+    },
+}
+
+/**
+ * @type {Project}
+ */
+const metaspark = {
+    id: 'metaspark',
+    title: 'MetaSpark',
+    category: 'web design',
+    period: '',
+    image: '/images/project-6.png',
+    overview: {
+      previews: {
+        architecture: '',
+        api: '',
+        erd: '',
+      },
+      period: '',
+      week: 0,
+      number: 0,
+      role: '',
+      summary: '',
+      keyFeature: '',
+    },
+    application: {
+      techStacks: [],
+      features: [],
+      contributions: [],
+    },
+    documentation: {
+      architecture: { image: '' },
+      api: { image: '' },
+      erd: { image: '' },
+    },
+    lessonLearned: {
+      problemSolving: [],
+      kpt: [
+        { keep: '', problem: '', try: '' },
+      ],
+    },
+}
+
+/**
+ * @type {Project}
+ */
+const summary = {
+    id: 'summary',
+    title: 'Summary',
+    category: 'web development',
+    period: '',
+    image: '/images/project-7.png',
+    overview: {
+      previews: {
+        architecture: '',
+        api: '',
+        erd: '',
+      },
+      period: '',
+      week: 0,
+      number: 0,
+      role: '',
+      summary: '',
+      keyFeature: '',
+    },
+    application: {
+      techStacks: [],
+      features: [],
+      contributions: [],
+    },
+    documentation: {
+      architecture: { image: '' },
+      api: { image: '' },
+      erd: { image: '' },
+    },
+    lessonLearned: {
+      problemSolving: [],
+      kpt: [
+        { keep: '', problem: '', try: '' },
+      ],
+    },
+}
+
+/**
+ * @type {Project}
+ */
+const taskManager = {
+    id: 'task-manager',
+    title: 'Task Manager',
+    category: 'applications',
+    period: '',
+    image: '/images/project-8.jpg',
+    overview: {
+      previews: {
+        architecture: '',
+        api: '',
+        erd: '',
+      },
+      period: '',
+      week: 0,
+      number: 0,
+      role: '',
+      summary: '',
+      keyFeature: '',
+    },
+    application: {
+      techStacks: [],
+      features: [],
+      contributions: [],
+    },
+    documentation: {
+      architecture: { image: '' },
+      api: { image: '' },
+      erd: { image: '' },
+    },
+    lessonLearned: {
+      problemSolving: [],
+      kpt: [
+        { keep: '', problem: '', try: '' },
+      ],
+    },
+}
+
+/**
+ * @type {Project}
+ */
+const arrival = {
+    id: 'arrival',
+    title: 'Arrival',
+    category: 'web development',
+    period: '',
+    image: '/images/project-9.png',
+    overview: {
+      previews: {
+        architecture: '',
+        api: '',
+        erd: '',
+      },
+      period: '',
+      week: 0,
+      number: 0,
+      role: '',
+      summary: '',
+      keyFeature: '',
+    },
+    application: {
+      techStacks: [],
+      features: [],
+      contributions: [],
+    },
+    documentation: {
+      architecture: { image: '' },
+      api: { image: '' },
+      erd: { image: '' },
+    },
+    lessonLearned: {
+      problemSolving: [],
+      kpt: [
+        { keep: '', problem: '', try: '' },
+      ],
+    },
+}
+
+
 /**
  * A collection of projects.
  * @type {Object<string, Project>}
  */
 export const projects = {
   ["facement"]: facement,
+  ["finance"]: finance,
+  ["orizon"]: orizon,
+  ["fundo"]: fundo,
+  ["brawlhalla"]: brawlhalla,
+  ["dsm."]: dsm,
+  ["metaspark"]: metaspark,
+  ["summary"]: summary,
+  ["task-manager"]: taskManager,
+  ["arrival"]: arrival,
 };

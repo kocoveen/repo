@@ -28,15 +28,14 @@
 	let selectedFilter = $state(filters[0]);
 
 	/**
-	 * @type {string}
+	 * @type {string | undefined}
 	 */
-	const lastPathname = $page.url.pathname.split('/')[2];
+	const lastPathname = $page.url.pathname.split('/').pop();
 </script>
 
 <article id="portfolio" class="portfolio active" data-page="portfolio">
 	<header>
-		<!-- <h2 class="h2 article-title">{projects[lastPathname].title}</h2> -->
-		<h2 class="h2 article-title">Project Name</h2>
+		<h2 class="h2 article-title">{projects[lastPathname ? lastPathname : ''].title}</h2>
 	</header>
 
 	<!-- 필터 버튼 -->
