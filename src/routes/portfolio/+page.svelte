@@ -1,87 +1,18 @@
 <script>
 	import { base } from '$app/paths';
+	import { projects } from '$lib/data/projectData.js';
 
-	const filters = ['All', 'Web design', 'Applications', 'Web development'];
-
-	const projects = [
-		{
-			id: 'facement',
-			title: 'Facement',
-			category: 'web development',
-			image: '/images/project-1.jpg',
-			alt: 'facement'
-		},
-		{
-			id: 'finance',
-			title: 'Finance',
-			category: 'web development',
-			image: '/images/project-1.jpg',
-			alt: 'finance'
-		},
-		{
-			id: 'orizon',
-			title: 'Orizon',
-			category: 'web development',
-			image: '/images/project-2.png',
-			alt: 'orizon'
-		},
-		{
-			id: 'fundo',
-			title: 'Fundo',
-			category: 'web design',
-			image: '/images/project-3.jpg',
-			alt: 'fundo'
-		},
-		{
-			id: 'brawlhalla',
-			title: 'Brawlhalla',
-			category: 'applications',
-			image: '/images/project-4.png',
-			alt: 'brawlhalla'
-		},
-		{
-			id: 'dsm.',
-			title: 'DSM.',
-			category: 'web design',
-			image: '/images/project-5.png',
-			alt: 'dsm.'
-		},
-		{
-			id: 'metaspark',
-			title: 'MetaSpark',
-			category: 'web design',
-			image: '/images/project-6.png',
-			alt: 'metaspark'
-		},
-		{
-			id: 'summary',
-			title: 'Summary',
-			category: 'web development',
-			image: '/images/project-7.png',
-			alt: 'summary'
-		},
-		{
-			id: 'task-manager',
-			title: 'Task Manager',
-			category: 'applications',
-			image: '/images/project-8.jpg',
-			alt: 'task manager'
-		},
-		{
-			id: 'arrival',
-			title: 'Arrival',
-			category: 'web development',
-			image: '/images/project-9.png',
-			alt: 'arrival'
-		}
-	];
+	const filters = ['All', 'Team Project', 'Web design', 'Applications', 'Web development'];
 
 	let selectedFilter = 'All';
 
 	$: filteredProjects =
 		selectedFilter === 'All'
-			? projects
-			: projects.filter((project) => project.category === selectedFilter.toLowerCase());
+			? Object.values(projects)
+			: Object.values(projects).filter(
+					(/** @type {import('$lib/data/projectData.js').Project} */ project) =>
+						project.category === selectedFilter.toLowerCase()
+				);
 </script>
 
 <article id="portfolio" class="portfolio active" data-page="portfolio">
@@ -113,7 +44,7 @@
 							<div class="project-item-icon-box">
 								<ion-icon name="eye-outline"></ion-icon>
 							</div>
-							<img src="{base}{project.image}" alt={project.alt} loading="lazy" />
+							<img src="{base}{project.image}" alt="준비중입니다." loading="lazy" />
 						</figure>
 						<h3 class="project-title">{project.title}</h3>
 						<p class="project-category">{project.category}</p>

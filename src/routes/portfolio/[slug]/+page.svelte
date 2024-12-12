@@ -1,25 +1,41 @@
 <script>
-	import { base } from '$app/paths';
+	import { page } from '$app/stores';
+	import { projects } from '$lib/data/projectData';
+
 	import PortfolioApplication from '$lib/components/PortfolioApplication.svelte';
 	import PortfolioDocumentation from '$lib/components/PortfolioDocumentation.svelte';
 	import PortfolioLessonLearned from '$lib/components/PortfolioLessonLearned.svelte';
 	import PortfolioOverview from '$lib/components/PortfolioOverview.svelte';
 
-	// import { activeProjectFilter } from '$lib/stores/activeFilter.js';
+	/**
+	 * @type {string}
+	 */
+	const lastPathname = $page.url.pathname.split('/')[2];
 
-	const filters = ['Overview', 'Documentation', 'Application', 'Lesson Learned'];
+	// 컴포넌트를 선택하기 위한 매핑
+	/**
+	 * @typedef {Object} FilterItem
+	 * @property {string} id - 필터의 고유 식별자 (예: "Overview", "Documentation").
+	 * @property {typeof PortfolioOverview | typeof PortfolioDocumentation | typeof PortfolioApplication | typeof PortfolioLessonLearned} component - 필터에 해당하는 컴포넌트.
+	 * @description 각 필터와 해당 컴포넌트를 매핑하는 객체입니다.
+	 */
 
-	let selectedFilter = 'Overview';
+	/**
+	 * @type {FilterItem[]}
+	 */
+	const filters = [
+		{ id: 'Overview', component: PortfolioOverview },
+		{ id: 'Documentation', component: PortfolioDocumentation },
+		{ id: 'Application', component: PortfolioApplication },
+		{ id: 'Lesson Learned', component: PortfolioLessonLearned }
+	];
 
-	// $: filteredProjects =
-	//     selectedFilter === 'Overview'
-	//         ? projects
-	//         : projects.filter((project) => project.category === selectedFilter.toLowerCase());
+	let selectedFilter = $state(filters[0]);
 </script>
 
 <article id="portfolio" class="portfolio active" data-page="portfolio">
 	<header>
-		<h2 class="h2 article-title">Facement</h2>
+		<h2 class="h2 article-title">{projects[lastPathname].title}</h2>
 	</header>
 
 	<!-- 필터 버튼 -->
@@ -27,25 +43,17 @@
 		{#each filters as filter}
 			<li class="filter-item">
 				<button
-					class:selected={filter === selectedFilter}
-					class:active={filter === selectedFilter}
-					on:click={() => (selectedFilter = filter)}
+					class:selected={filter.id === selectedFilter.id}
+					class:active={filter.id === selectedFilter.id}
+					onclick={() => (selectedFilter = filter)}
 				>
-					{filter}
+					{filter.id}
 				</button>
 			</li>
 		{/each}
 	</ul>
 
-	{#if selectedFilter === 'Overview'}
-		<PortfolioOverview />
-	{:else if selectedFilter === 'Documentation'}
-		<PortfolioDocumentation />
-	{:else if selectedFilter === 'Application'}
-		<PortfolioApplication />
-	{:else if selectedFilter === 'Lesson Learned'}
-		<PortfolioLessonLearned />
-	{/if}
+	<selectedFilter.component />
 </article>
 
 <style>
