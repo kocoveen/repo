@@ -1,4 +1,4 @@
-export const data = {
+export const techStacks = {
     "java": {
         "name": "Java",
         "icon": "https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1667082075/noticon/evii0kwjuapddhzjmdrb.png"

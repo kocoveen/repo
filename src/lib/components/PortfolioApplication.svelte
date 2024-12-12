@@ -1,49 +1,20 @@
 <script>
+	import { techStacks } from '$lib/data/techStack';
+
+	import TechStack from './TechStack.svelte';
 </script>
 
 <section class="application">
 	<h3 class="h3 article-title">기술 스택</h3>
 	<ul class="tech-list">
-		{@render makeTechStackBox(
-			'https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1667082075/noticon/evii0kwjuapddhzjmdrb.png',
-			'Java',
-			'안정성과 성능이 검증된 언어'
-		)}
-		{@render makeTechStackBox(
-			'https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1583139980/noticon/vtzecmjzn39cifnjtonx.png',
-			'Spring Boot',
-			'빠른 어플 개발 지원'
-		)}
-		{@render makeTechStackBox(
-			'https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1686935854/noticon/r7w1ipwmdmhlfzqfw69h.png',
-			'Spring Security',
-			'사용자 정보 암호화'
-		)}
-		{@render makeTechStackBox(
-			'https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1687307488/noticon/o9lxyva5z8zbwyeaxers.png',
-			'JPA',
-			'객체지향적 DB 관리'
-		)}
-		{@render makeTechStackBox(
-			'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg',
-			'MySQL',
-			'안정적 관계형 DB'
-		)}
-		{@render makeTechStackBox(
-			'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apachekafka/apachekafka-original.svg',
-			'Kafka',
-			'대용량 사진 메시징 및 비동기 처리'
-		)}
-		{@render makeTechStackBox(
-			'https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1569654347/noticon/mdujedvj9w8c9rz9phny.png',
-			'JWT',
-			'간편한 인증 관리'
-		)}
-		{@render makeTechStackBox(
-			'https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1566913958/noticon/uoqjdixts4lwsgtsa1pd.png',
-			'FCM',
-			'실시간 알림 송신'
-		)}
+		<TechStack data={techStacks['java']} desc="안정성과 성능이 검증된 언어" />
+		<TechStack data={techStacks['spring boot']} desc="빠른 어플 개발 지원" />
+		<TechStack data={techStacks['spring security']} desc="사용자 정보 암호화" />
+		<TechStack data={techStacks['jpa']} desc="객체지향적 DB 관리" />
+		<TechStack data={techStacks['mysql']} desc="안정적 관계형 DB" />
+		<TechStack data={techStacks['kafka']} desc="대용량 사진 메시징 및 비동기 처리" />
+		<TechStack data={techStacks['jwt']} desc="간편한 인증 관리" />
+		<TechStack data={techStacks['fcm']} desc="실시간 알림 송신" />
 	</ul>
 
 	<h3 class="h3 article-title">개발 기능</h3>
@@ -63,24 +34,6 @@
 	</ul>
 </section>
 
-{#snippet makeTechStackBox(
-	/** @type {string} */ src,
-	/** @type {string} */ title,
-	/** @type {string} */ desc
-)}
-	<li class="tech-item">
-		<div class="tech-icon-box">
-			<img {src} alt="tech stack" width="30" />
-		</div>
-
-		<div class="tech-info">
-			<p class="tech-title">{title}</p>
-
-			<desc>{desc}</desc>
-		</div>
-	</li>
-{/snippet}
-
 <style>
 	/**
 	* application
@@ -89,59 +42,11 @@
 		margin-bottom: 20px;
 	}
 
-	/**
-   * # tech
-   */
-
-	.tech-icon-box {
-		position: relative;
-		/* background: var(--border-gradient-onyx); */
-		background-color: aliceblue;
-		width: 40px;
-		height: 40px;
-		border-radius: 8px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		font-size: 16px;
-		color: var(--orange-yellow-crayola);
-		box-shadow: var(--shadow-1);
-		z-index: 1;
-	}
-
 	.tech-list {
 		display: grid;
 		grid-template-columns: 1fr;
 		gap: 16px;
 		margin-bottom: 35px;
-	}
-
-	.tech-item {
-		min-width: 100%;
-		display: flex;
-		align-items: center;
-		gap: 16px;
-	}
-
-	.tech-info {
-		max-width: calc(100% - 46px);
-		width: calc(100% - 46px);
-	}
-
-	.tech-title {
-		color: var(--light-gray-70);
-		font-size: var(--fs-8);
-		text-transform: uppercase;
-		margin-bottom: 2px;
-	}
-
-	.tech-info :is(.tech-link, desc) {
-		color: var(--white-2);
-		font-size: var(--fs-7);
-	}
-
-	.tech-info address {
-		font-style: normal;
 	}
 
 	.social-list {
