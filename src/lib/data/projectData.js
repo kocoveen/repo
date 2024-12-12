@@ -484,6 +484,6 @@ export const projects = {
   ["brawlhalla"]: brawlhalla,
   ["metaspark"]: metaspark,
   ["summary"]: summary,
-  ["taskManager"]: taskManager,
+  ["task-manager"]: taskManager,
   ["arrival"]: arrival,
 };
