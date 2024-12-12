@@ -77,7 +77,7 @@ const facement = {
   title: "Facement",
   category: "team project",
   period: "2024.08~2024.10",
-  image: '/images/project-1.jpg',
+  image: '/images/project-5.png',
   overview: {
     previews: {
       architecture: "",
@@ -314,46 +314,6 @@ const brawlhalla = {
 /**
  * @type {Project}
  */
-const dsm = {
-    id: 'dsm.',
-    title: 'DSM.',
-    category: 'web design',
-    period: '',
-    image: '/images/project-5.png',
-    overview: {
-      previews: {
-        architecture: '',
-        api: '',
-        erd: '',
-      },
-      period: '',
-      week: 0,
-      number: 0,
-      role: '',
-      summary: '',
-      keyFeature: '',
-    },
-    application: {
-      techStacks: [],
-      features: [],
-      contributions: [],
-    },
-    documentation: {
-      architecture: { image: '' },
-      api: { image: '' },
-      erd: { image: '' },
-    },
-    lessonLearned: {
-      problemSolving: [],
-      kpt: [
-        { keep: '', problem: '', try: '' },
-      ],
-    },
-}
-
-/**
- * @type {Project}
- */
 const metaspark = {
     id: 'metaspark',
     title: 'MetaSpark',
@@ -522,7 +482,6 @@ export const projects = {
   ["orizon"]: orizon,
   ["fundo"]: fundo,
   ["brawlhalla"]: brawlhalla,
-  ["dsm"]: dsm,
   ["metaspark"]: metaspark,
   ["summary"]: summary,
   ["taskManager"]: taskManager,

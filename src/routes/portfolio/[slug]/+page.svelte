@@ -35,7 +35,7 @@
 
 <article id="portfolio" class="portfolio active" data-page="portfolio">
 	<header>
-		<h2 class="h2 article-title">Project Name</h2>
+		<h2 class="h2 article-title">{projects[lastPathname].title}</h2>
 	</header>
 
 	<!-- 필터 버튼 -->
