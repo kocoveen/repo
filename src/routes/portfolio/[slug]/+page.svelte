@@ -7,11 +7,6 @@
 	import PortfolioLessonLearned from '$lib/components/PortfolioLessonLearned.svelte';
 	import PortfolioOverview from '$lib/components/PortfolioOverview.svelte';
 
-	/**
-	 * @type {string}
-	 */
-	const lastPathname = $page.url.pathname.split('/')[2];
-
 	// 컴포넌트를 선택하기 위한 매핑
 	/**
 	 * @typedef {Object} FilterItem
@@ -31,11 +26,17 @@
 	];
 
 	let selectedFilter = $state(filters[0]);
+
+	/**
+	 * @type {string}
+	 */
+	const lastPathname = $page.url.pathname.split('/')[2];
 </script>
 
 <article id="portfolio" class="portfolio active" data-page="portfolio">
 	<header>
-		<h2 class="h2 article-title">{projects[lastPathname].title}</h2>
+		<!-- <h2 class="h2 article-title">{projects[lastPathname].title}</h2> -->
+		<h2 class="h2 article-title">Project Name</h2>
 	</header>
 
 	<!-- 필터 버튼 -->
