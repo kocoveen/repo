@@ -7,35 +7,21 @@
 	import PortfolioLessonLearned from '$lib/components/PortfolioLessonLearned.svelte';
 	import PortfolioOverview from '$lib/components/PortfolioOverview.svelte';
 
-	// 컴포넌트를 선택하기 위한 매핑
-	/**
-	 * @typedef {Object} FilterItem
-	 * @property {string} id - 필터의 고유 식별자 (예: "Overview", "Documentation").
-	 * @property {typeof PortfolioOverview | typeof PortfolioDocumentation | typeof PortfolioApplication | typeof PortfolioLessonLearned} component - 필터에 해당하는 컴포넌트.
-	 * @description 각 필터와 해당 컴포넌트를 매핑하는 객체입니다.
-	 */
+	const filters = ['Overview', 'Documentation', 'Application', 'Lesson Learned'];
 
-	/**
-	 * @type {FilterItem[]}
-	 */
-	const filters = [
-		{ id: 'Overview', component: PortfolioOverview },
-		{ id: 'Documentation', component: PortfolioDocumentation },
-		{ id: 'Application', component: PortfolioApplication },
-		{ id: 'Lesson Learned', component: PortfolioLessonLearned }
-	];
-
-	let selectedFilter = $state(filters[0]);
+	let selectedFilter = filters[0];
 
 	/**
 	 * @type {string | undefined}
 	 */
-	const lastPathname = $page.url.pathname.split('/').pop();
+	let lastPathname = $page.url.pathname.split('/').pop();
+
+	let project = projects[lastPathname ? lastPathname : ''];
 </script>
 
 <article id="portfolio" class="portfolio active" data-page="portfolio">
 	<header>
-		<h2 class="h2 article-title">{projects[lastPathname ? lastPathname : ''].title}</h2>
+		<h2 class="h2 article-title">{project.title}</h2>
 	</header>
 
 	<!-- 필터 버튼 -->
@@ -43,24 +29,26 @@
 		{#each filters as filter}
 			<li class="filter-item">
 				<button
-					class:selected={filter.id === selectedFilter.id}
-					class:active={filter.id === selectedFilter.id}
+					class:selected={filter === selectedFilter}
+					class:active={filter === selectedFilter}
 					onclick={() => (selectedFilter = filter)}
 				>
-					{filter.id}
+					{filter}
 				</button>
 			</li>
 		{/each}
 	</ul>
 
-	<selectedFilter.component />
+	{#if selectedFilter === 'Overview'}
+		<PortfolioOverview overview={project.overview} />
+	{:else if selectedFilter === 'Documentation'}
+		<PortfolioDocumentation documentation={project.documentation} />
+	{:else if selectedFilter === 'Application'}
+		<PortfolioApplication application={project.application} />
+	{:else if selectedFilter === 'Lesson Learned'}
+		<PortfolioLessonLearned lessonLearned={project.lessonLearned} />
+	{/if}
 </article>
 
 <style>
-	/* @media (min-width: 580px) {
-		.content-card {
-			padding: 30px;
-			padding-top: 25px;
-		}
-	} */
 </style>

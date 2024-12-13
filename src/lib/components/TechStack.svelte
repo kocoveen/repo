@@ -1,14 +1,18 @@
 <script>
-	let { data, desc } = $props();
+	let { id, desc } = $props();
+
+	import { techStacks } from '$lib/data/techStack';
+
+	let stack = techStacks.filter((t) => t.id === id)[0];
 </script>
 
 <li class="tech-item">
 	<div class="tech-icon-box">
-		<img src={data.icon} alt="tech stack" width="30" />
+		<img src={stack.icon} alt="tech stack" width="30" />
 	</div>
 
 	<div class="tech-info">
-		<p class="tech-title">{data.name}</p>
+		<p class="tech-title">{stack.name}</p>
 
 		<desc>{desc}</desc>
 	</div>

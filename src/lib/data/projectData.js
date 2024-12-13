@@ -30,9 +30,16 @@
 /**
  * Technical details and features of the project.
  * @typedef {Object} Application
- * @property {string[]} techStacks - List of technologies and frameworks used.
+ * @property {TechStack[]} techStacks - List of technologies and frameworks used.
  * @property {string[]} features - List of implemented features.
  * @property {string[]} contributions - Specific contributions made by the contributor.
+ */
+
+/**
+ * Technical stack and description
+ * @typedef {Object} TechStack
+ * @property {string} id - Identify of the Tech.
+ * @property {string} desc - The reason of using this stack.
  */
 
 /**
@@ -93,14 +100,14 @@ const facement = {
   },
   application: {
     techStacks: [
-      "Java",
-      "Spring Boot",
-      "Spring Security",
-      "JPA",
-      "MySQL",
-      "Kafka",
-      "JWT",
-      "FCM"
+      { id: "java", desc: "안정성과 성능이 검증된 언어" },
+      { id: "spring boot", desc: "빠른 어플 개발 지원" },
+      { id: "spring security", desc: "사용자 정보 암호화" },
+      { id: "jpa", desc: "객체지향적 DB 관리" },
+      { id: "mysql", desc: "안정적 관계형 DB" },
+      { id: "kafka", desc: "대용량 사진 메시징 및 비동기 처리" },
+      { id: "jwt", desc: "간편한 인증 관리" },
+      { id: "fcm", desc: "실시간 알림 송신" },
     ],
     features: [
       "OAuth 2.0 기반 인증 시스템 구현",

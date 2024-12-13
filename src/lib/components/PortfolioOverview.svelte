@@ -1,5 +1,5 @@
 <script>
-	let props = $props();
+	let { overview } = $props();
 </script>
 
 <section class="overview">
@@ -8,20 +8,13 @@
 		<li class="overview-item">
 			<div class="content-card">
 				{@render makeIconBox('calendar-outline', '개발 기간')}
-
-				<!-- <figure class="overview-icon-box">
-                    <img src="{base}/images/icon-dev.svg" alt="tmp icon" width="0" />
-                </figure> -->
 				<div class="overview-text">
-					<p>2024.08~2024.10 (6주)</p>
+					<p>{overview.period} ({overview.week}주)</p>
 				</div>
 			</div>
 		</li>
 		<li class="overview-item">
 			<div class="content-card">
-				<!-- <figure class="overview-icon-box">
-                    <img src="{base}/images/icon-dev.svg" alt="tmp icon" width="0" />
-                </figure> -->
 				<figure class="overview-item">
 					<div class="icon-box">
 						<ion-icon name="people-outline"></ion-icon>
@@ -32,7 +25,7 @@
 					</div>
 				</figure>
 				<div class="overview-text">
-					<p>6명</p>
+					<p>{overview.number}명</p>
 				</div>
 			</div>
 		</li>

@@ -1,41 +1,59 @@
-export const techStacks = {
-    "java": {
+/**
+ * @typedef {Object} TechStack
+ * @property {string} id
+ * @property {string} name
+ * @property {string} icon
+ */
+
+/**
+ * @type {TechStack[]}
+ */
+export const techStacks = [
+    {
+        "id": "java",
         "name": "Java",
-        "icon": "https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1667082075/noticon/evii0kwjuapddhzjmdrb.png"
+        "icon": "https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1667082075/noticon/evii0kwjuapddhzjmdrb.png",
     },
 
-    "spring boot": {
+    {
+        "id": "spring boot",
         "name": "Spring Boot",
-        "icon": "https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1583139980/noticon/vtzecmjzn39cifnjtonx.png"
+        "icon": "https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1583139980/noticon/vtzecmjzn39cifnjtonx.png",
     },
 
-    "spring security": {
+    {
+        "id": "spring security",
         "name": "Spring Security",
-        "icon": "https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1686935854/noticon/r7w1ipwmdmhlfzqfw69h.png"
+        "icon": "https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1686935854/noticon/r7w1ipwmdmhlfzqfw69h.png",
     },
 
-    "jpa": {
+    {
+        "id": "jpa",
         "name": "JPA",
-        "icon": "https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1687307488/noticon/o9lxyva5z8zbwyeaxers.png"
+        "icon": "https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1687307488/noticon/o9lxyva5z8zbwyeaxers.png",
     },
 
-    "mysql": {
+    {
+        "id": "mysql",
         "name": "MySQL",
-        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg"
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg",
     },
 
-    "kafka": {
+    {
+        "id": "kafka",
         "name": "Kafka",
-        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apachekafka/apachekafka-original.svg"
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apachekafka/apachekafka-original.svg",
     },
 
-    "jwt": {
+    {
+        "id": "jwt",
         "name": "JWT",
-        "icon": "https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1569654347/noticon/mdujedvj9w8c9rz9phny.png"
+        "icon": "https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1569654347/noticon/mdujedvj9w8c9rz9phny.png",
     },
 
-    "fcm": {
+    {
+        "id": "fcm",
         "name": "FCM",
-        "icon": "https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1566913958/noticon/uoqjdixts4lwsgtsa1pd.png"
+        "icon": "https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1566913958/noticon/uoqjdixts4lwsgtsa1pd.png",
     },
-}
+]
