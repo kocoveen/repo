@@ -41,7 +41,7 @@
 					</div>
 				</figure>
 				<div class="overview-text">
-					<p>백엔드</p>
+					<p>{overview.role}</p>
 					<!-- <p>
                         <strong>목표:</strong> 안면 인식 정산 자동화로 정산 시간을 대폭 단축<br />
                         <strong>성과:</strong> 사진 등록 응답 시간 5초에서 1초 미만으로 단축<br />
@@ -63,10 +63,7 @@
 				</figure>
 				<div class="overview-text">
 					<p>
-						<strong>Facement</strong> 프로젝트는 기존 정산 앱이 정산 대상 및 메뉴, 금액을 수동으로
-						지정해야 하는 불편함을 해결하고자 딥러닝 모델로 사용자를 구별하고, AI로 영수증을 인식해
-						각 메뉴와 금액, 수량을 분류해 불필요한 입력없이 정산을 할 수 있는
-						<strong>다중 안면 인식 정산 자동화 서비스</strong>입니다.
+						{@html overview.summary}
 					</p>
 				</div>
 			</div>
@@ -84,10 +81,7 @@
 				</figure>
 				<div class="overview-text">
 					<p>
-						프로젝트는 기존 정산 앱이 정산 대상 및 메뉴, 금액을 수동으로 지정해야 하는 불편함을
-						해결하고자 딥러닝 모델로 사용자를 구별하고, AI로 영수증을 인식해 각 메뉴와 금액, 수량을
-						분류해 불필요한 입력없이 정산을 할 수 있는
-						<strong>다중 안면 인식 정산 자동화 서비스</strong>입니다.
+						{@html overview.keyFeature}
 					</p>
 				</div>
 			</div>
