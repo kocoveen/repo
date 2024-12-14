@@ -146,6 +146,12 @@ const facement = {
   lessonLearned: {
     problemSolving: [
       {
+        problem: "`Spring Security`를 사용하면서, `@RestControllerAdvice`에서 토큰 관련 예외를 잡지 못해 토큰 관련 오류가 그대로 메세지에 들어가는 문제가 있었습니다.",
+        solution: "`Spring security`는 필터 체인으로 `@RestControllerAdvice`에서 발생하는 예외는 컨트롤러 밖에 있는 필터의 오류는 잡지 못합니다. 그렇기 때문에, `Spring Security`에서 AuthenticationEntryPoint를 별도로 정의하여 AuthenticationException 발생 시 제공하는 예외를 구분해, 만료 토큰과 유효하지 않은 토큰에 대해 적절한 CustomException을 던질 수 있도록 했습니다.",
+        result: "이를 통해 예외를 일관되게 나오도록 관리했고, 예외의 로그가 밖에 노출되지 않도록 했습니다.",
+        takeaway: "Spring Framework 및 Spring Security의 작동 방식을 이해할 수 있었습니다.",
+      },
+      {
         problem: "최종 응답 시간이 5초로 길어 사용성 저하",
         solution: "Kafka를 도입해 사진 등록 속도 5초에서 1초로 개선",
         result: "",
@@ -157,12 +163,6 @@ const facement = {
         result: "",
         takeaway: "",
       },
-      {
-        problem: "`@RestControllerAdvice` 에서 토큰 관련 예외를 잡지 못함.",
-        solution: "필터에서 발생하는 예외는 따로 처리해야 하는 문제가 있었습니다. 이를 위해 AuthenticationEntryPoint를 별도로 정의하여 AuthenticationException 발생 시 제공하는 예외를 구분해, 만료 토큰과 유효하지 않은 토큰에 대해 적절한 CustomException을 던질 수 있도록 했습니다. 이를 통해 예외를 일관되게 관리했고, 예외의 로그가 밖에 노출되지 않도록 했습니다.",
-        result: "",
-        takeaway: "",
-      }
     ],
     kpt: [
       {
