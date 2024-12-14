@@ -65,6 +65,8 @@
  * @typedef {Object} ProblemSolving
  * @property {string} problem - The identified problem.
  * @property {string} solution - The solution implemented to address the problem.
+ * @property {string} result - The result that apply this solution. 
+ * @property {string} takeaway - What I learned through this problem solving.
  */
 
 /**
@@ -124,9 +126,10 @@ const facement = {
       "AI 서버 운영 및 유지보수"
     ],
     contributions: [
-      "백엔드 시스템 및 아키텍처 설계",
+      "API, ERD 및 아키텍처 설계",
       "기술 문서화 및 팀 내 지식 공유",
-      "결제 정산 API 구현"
+      "결제 정산 API 구현",
+      "AI 서버 유지 보수",
     ]
   },
   documentation: {
@@ -144,15 +147,21 @@ const facement = {
     problemSolving: [
       {
         problem: "최종 응답 시간이 5초로 길어 사용성 저하",
-        solution: "Kafka를 도입해 사진 등록 속도 5초에서 1초로 개선"
+        solution: "Kafka를 도입해 사진 등록 속도 5초에서 1초로 개선",
+        result: "",
+        takeaway: "",
       },
       {
         problem: "DB에 저장된 사용자 정보가 그대로 노출",
-        solution: "Spring Security로 데이터 암호화"
+        solution: "Spring Security로 데이터 암호화",
+        result: "",
+        takeaway: "",
       },
       {
-        problem: "실시간으로 정산 확인 불가",
-        solution: "FCM을 통한 실시간 정산 및 송금 알림"
+        problem: "`@RestControllerAdvice` 에서 토큰 관련 예외를 잡지 못함.",
+        solution: "필터에서 발생하는 예외는 따로 처리해야 하는 문제가 있었습니다. 이를 위해 AuthenticationEntryPoint를 별도로 정의하여 AuthenticationException 발생 시 제공하는 예외를 구분해, 만료 토큰과 유효하지 않은 토큰에 대해 적절한 CustomException을 던질 수 있도록 했습니다. 이를 통해 예외를 일관되게 관리했고, 예외의 로그가 밖에 노출되지 않도록 했습니다.",
+        result: "",
+        takeaway: "",
       }
     ],
     kpt: [
