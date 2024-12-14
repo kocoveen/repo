@@ -172,7 +172,7 @@
 
 	.overview-text {
 		color: var(--light-gray);
-		font-size: var(--fs-6);
+		font-size: var(--fs-5);
 		font-weight: var(--fw-300);
 		line-height: 1.6;
 		/* display: -webkit-box; */
