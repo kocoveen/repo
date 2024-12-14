@@ -1,12 +1,14 @@
 <script>
 	import { base } from '$app/paths';
+
+	let infoMoreActive = false;
 </script>
 
 <!--
 - #SIDEBAR
 -->
 
-<aside class="sidebar" data-sidebar>
+<aside class="sidebar" class:active={infoMoreActive} data-sidebar>
 	<div class="sidebar-info">
 		<figure class="avatar-box">
 			<img src={`${base}/images/my-photo.png`} alt="장웅기" width="80" />
@@ -18,7 +20,11 @@
 			<p class="title">Backend developer</p>
 		</div>
 
-		<button class="info_more-btn" data-sidebar-btn>
+		<button
+			class="info_more-btn"
+			onclick={() => (infoMoreActive = !infoMoreActive)}
+			data-sidebar-btn
+		>
 			<span>Show Contacts</span>
 
 			<ion-icon name="chevron-down"></ion-icon>
